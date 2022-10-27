@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/style.css')}}">
+</head>
+<body>
+    <div class="box">
+            {% for i in r%}
+                <div style="width: 600px; height: 650px;text-align: center; background-color: white; border: 1px solid black; border-radius:10px; overflow: hidden;">
+                    <div style="width: 650px;  height: 500px;text-align: center;  overflow: hidden; background-image: url({{i['url-flag']}}); background-size:cover; "></div>
+                    <p class="f1">Название:{{i['name']}}</p>
+                    <p class="f1">Столица:{{i['capital']}}</p>
+                    <p class="f1">Города : {{i['goroda']}}</p>
+                </div>
+
+            {% endfor%}
+</body>
+</html> 
